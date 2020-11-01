@@ -5,7 +5,7 @@
 
 Web UI link http://d3nsoorrxk3psz.cloudfront.net/
 
-
+Video demo link https://drive.google.com/file/d/15GKRBOCzhQB6_vcMWTf3FS7vkdqF4aIA/view?usp=sharing
 
 ## Client
 
@@ -78,3 +78,11 @@ TWITTER_TOKEN_SECRET=
 ```
 
 
+### Limitations and future work
+
+- Currently payout is made every one minute regardless of payment interval chosen by publisher.
+- There is no oAuth against Twitter to verify whether the person joining the campaing is indeed the person who posted the retweet.
+- There is no check to verify that the quoted tweet is indeed a retweet of the parent tweet.
+- OAuth would also allow the app to get more metrics such as Clickthrough rate and impressions and make the campaign more expansive.
+- App currently only works on the Gorli testnet.
+- The client side web3 interaction has only been tested with Metamask.

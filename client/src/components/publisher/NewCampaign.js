@@ -117,7 +117,7 @@ class CampaignDetails extends Component {
   render() {
     const {marketLink,payoutInterval, payoutIntervalUnit, likePayout, retweetPayout, commentPayout} = this.state;
     return (
-      <div>
+      <div className="new-campaign-container">
         <Form onSubmit={this.submitPublisherRequest}>
 
          <Form.Group controlId="formBasicEmail">

@@ -39,19 +39,16 @@ const mapDispatchToProps = (dispatch) => {
     
     approveSubscription: (publisher, marketer) => {
     dispatch(approvalPending());
-    
-
-    
-sf.initialize().then(function(response){
-  sf.resolver.get("tokens.fDAI").then(function(daiAddress){
-    sf.contracts.TestToken.at(daiAddress).then(function(dai){
-      sf.getERC20Wrapper(dai).then(function(daixWrapper){
-        sf.contracts.ISuperToken.at(daixWrapper.wrapperAddress).then(function(daixResponse){
-          daix = daixResponse;
-    sf.host.callAgreement(sf.agreements.ida.address, sf.agreements.ida.contract.methods.approveSubscription(daix.address, publisher, 42, "0x").encodeABI(), { from: marketer })
-    .then(function(approvalResponse){
-      dispatch(approvalSuccess());
-    })
+      sf.initialize().then(function(response){
+        sf.resolver.get("tokens.fDAI").then(function(daiAddress){
+          sf.contracts.TestToken.at(daiAddress).then(function(dai){
+            sf.getERC20Wrapper(dai).then(function(daixWrapper){
+              sf.contracts.ISuperToken.at(daixWrapper.wrapperAddress).then(function(daixResponse){
+                daix = daixResponse;
+          sf.host.callAgreement(sf.agreements.ida.address, sf.agreements.ida.contract.methods.approveSubscription(daix.address, publisher, 42, "0x").encodeABI(), { from: marketer })
+          .then(function(approvalResponse){
+            dispatch(approvalSuccess());
+          })
         });
       });
     });
