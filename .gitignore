@@ -2,3 +2,4 @@ client/node_modules
 gateway/node_modules
 client/.env
 gateway/.env
+client/build
