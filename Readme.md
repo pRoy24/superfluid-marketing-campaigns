@@ -5,7 +5,7 @@
 
 Web UI link http://d3nsoorrxk3psz.cloudfront.net/
 
-Video demo link https://drive.google.com/file/d/15GKRBOCzhQB6_vcMWTf3FS7vkdqF4aIA/view?usp=sharing
+Video demo link https://www.youtube.com/watch?v=QVXtqWortRQ
 
 ## Client
 
